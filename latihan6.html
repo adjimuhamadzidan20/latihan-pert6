@@ -1,22 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>latihan 6</title>
     <style>
-        table textarea {
-            width: 400px;
+        body {
+            font-family: 'Times New Roman', Times, serif;
         }
+
+        .tabel {
+            width: 550px;
+            border: 1px solid green;
+            margin: auto;
+        }
+
+        .tabel thead tr #judul {
+            padding: 28px 0;
+            font-size: 25px;
+        }
+
+        table textarea {
+            width: 355px;
+            height: 60px;
+        }
+
+        .Agama {
+            width: 115px;
+        }
+
+        .Agama::placeholder {
+            color: black;
+            padding: 0 2px;
+        }
+
+        .button {
+            margin-top: 5px;
+            margin-left: 4px;
+        }
+
     </style>
 </head>
 <body>
     <br><br><br><br><br>
-    <table border="1" align="center">
+    <table border="1" class="tabel">
         <thead>
             <tr>
-                <th>Form Input Biodata</th>
+                <th id="judul">Form Input Biodata</th>
             </tr>
         </thead>
         <tbody>
@@ -24,61 +55,62 @@
                 <td>
                     <table border="0">
                         <tr>
-                            <td><label for="">Nama Lengkap</label></td>
+                            <td><label for="nama">Nama Lengkap</label></td>
                             <td>:</td>
-                            <td><input type="text"></td>
+                            <td><input type="text" id="nama"></td>
                         </tr>
                         <tr>
-                            <td><label for="">Tempat, Tanggal Lahir</label></td>
+                            <td><label for="lahir">Tempat, Tanggal Lahir</label></td>
                             <td>:</td>
                             <td>
-                                <input type="text">,<input type="datetime">
+                                <input type="text" id="lahir"> , <input type="date" id="lahir">
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="">Alamat</label></td>
+                            <td><label for="alamat">Alamat</label></td>
                             <td>:</td>
-                            <td><textarea name="" id=""></textarea></td>
+                            <td><textarea name="alamat" id="alamat"></textarea></td>
                         </tr>
                         <tr>
-                            <td><label for="">No.Telp/HP</label></td>
+                            <td><label for="telp">No.Telp/HP</label></td>
                             <td>:</td>
-                            <td><input type="number"></td>
+                            <td><input type="number" id="telp"></td>
                         </tr>
                         <tr>
-                            <td><label for="">Jenis Kelamin</label></td>
+                            <td><label for="gender">Jenis Kelamin</label></td>
                             <td>:</td>
                             <td>
-                                <input type="radio">Laki-Laki
-                                <input type="radio">Perempuan
+                                <input type="radio" name="Jenis Kelamin" id="gemder"> Laki-Laki
+                                <input type="radio" name="Jenis Kelamin" id="gender"> Perempuan
                             </td>
                         </tr>
                         <tr>
                             <td>Agama</td>
                             <td>:</td>
                             <td>
-                                <select name="Pilih Agama" id="">
-                                    <option value="">Islam</option>
-                                    <option value="">Kristen</option>
-                                    <option value="">Hindu</option>
-                                    <option value="">Buddha</option>
-                                </select>
+                                <input list="agama" name="agama" placeholder="-- Pilih Agama --" class="Agama">
+	                            <datalist id="agama">
+                                    <option value="Islam"></option>
+                                    <option value="Kristen"></option>
+                                    <option value="Hindu"></option>
+                                    <option value="Buddha"></option>
+                                </datalist>
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="">Hobi</label></td>
+                            <td><label>Hobi</label></td>
                             <td>:</td>
                             <td>
-                                <input type="checkbox">Baca Buku
-                                <input type="checkbox">Olah Raga
-                                <input type="checkbox">Main Game
-                                <input type="checkbox">Koding
+                                <input type="checkbox"> Baca Buku
+                                <input type="checkbox"> Olah Raga
+                                <input type="checkbox"> Main Game
+                                <input type="checkbox"> Koding
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="Submit">
-                                <input type="reset">
+                            <td class="button">
+                                <a href="#"><input type="Submit" class="button"></a>
+                                <a href="#"><input type="reset" value="Clear!" class="button"></a>
                             </td>
                         </tr>
                     </table>
